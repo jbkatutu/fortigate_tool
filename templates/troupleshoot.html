@@ -1,1 +1,24 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troubleshoot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="troubleshoot-container">
+        <h1>FortiGate Troubleshooting</h1>
+        <form method="POST" action="{{ url_for('troubleshoot') }}">
+            <label for="username">Client Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter username" required>
+
+            <label for="percentage">Error Percentage:</label>
+            <input type="number" id="percentage" name="percentage" placeholder="Enter error percentage" required>
+
+            <button type="submit">Diagnose</button>
+        </form>
+    </div>
+</body>
+</html>
