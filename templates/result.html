@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="result-container">
+        <h1>Diagnosis Result</h1>
+        <p><strong>Solution:</strong> {{ solution }}</p>
+        <p><strong>Command:</strong></p>
+        <pre>{{ command }}</pre>
+        <a href="{{ url_for('home') }}" class="back-link">Back to Troubleshoot</a>
+    </div>
+</body>
+</html>
